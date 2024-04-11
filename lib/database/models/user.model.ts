@@ -15,18 +15,41 @@ export interface UserInterface extends Document {
 }
 
 const UserSchema = new Schema({
-    clerkId: { type: String, required: true, unique: true},
-    email: { type: String, required: true, unique: true},
-    username: { type: String, required: true, unique: true},
-    photo: { type: String},
-    firstName: { type: String},
-    lastName: { type: String},
-    planId: { type: Number, default: 1},
-    creditBalance: { type: Number, default: 10},
-    createdAt: {type: Date, default: Date.now },
-    updatedAt: {type: Date, default: Date.now }
-})
+  clerkId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  photo: {
+    type: String,
+    required: true,
+  },
+  firstName: {
+    type: String,
+  },
+  lastName: {
+    type: String,
+  },
+  planId: {
+    type: Number,
+    default: 1,
+  },
+  creditBalance: {
+    type: Number,
+    default: 10,
+  },
+});
 
-const UserModel = models?.User || model('UserModel', UserSchema);
+const User = models?.User || model("User", UserSchema);
 
-export default UserModel;
+export default User;
