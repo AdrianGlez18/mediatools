@@ -136,3 +136,11 @@ declare type CreateUserParams = {
     hasDownload?: boolean;
     setIsTransforming?: React.Dispatch<React.SetStateAction<boolean>>;
   };
+
+  declare type MediaUploaderProps = {
+    onValueChange: (value: string) => void;
+    setImage: React.DIspatch<any>;
+    publicId: string;
+    image: any;
+    type: string;
+  }
